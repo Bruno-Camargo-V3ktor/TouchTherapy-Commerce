@@ -9,7 +9,7 @@ pub struct Service<'a> {
     description: &'a str,
     duration: u8,
     price: f64,
-    equipments: Vec<Equipment>,
+    equipments: Vec<Equipment<'a>>,
     active: bool,
     log: Log,
 }
