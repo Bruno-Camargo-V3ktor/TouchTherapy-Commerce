@@ -1,4 +1,4 @@
-use super::Roles;
+use super::{Log, Roles};
 use chrono::{DateTime, Utc};
 use serde::{Deserialize, Serialize};
 use uuid::Uuid;
@@ -13,6 +13,5 @@ pub struct User<'a> {
     birth: DateTime<Utc>,
     role: Roles,
     active: bool,
-    created_at: DateTime<Utc>,
-    updated_at: DateTime<Utc>,
+    log: Log,
 }
