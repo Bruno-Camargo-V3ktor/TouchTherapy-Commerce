@@ -1,12 +1,15 @@
+use chrono::{DateTime, Utc};
+use serde::{Deserialize, Serialize};
+
+mod appointment;
 mod equipment;
 mod roles;
 mod service;
 mod user;
 
-use chrono::{DateTime, Utc};
+pub use appointment::*;
 pub use equipment::*;
 pub use roles::*;
-use serde::{Deserialize, Serialize};
 pub use service::*;
 pub use user::*;
 
