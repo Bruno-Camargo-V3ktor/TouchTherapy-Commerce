@@ -11,7 +11,7 @@ pub struct User<'a> {
     pub cpf: &'a str,
     pub phone: &'a str,
     pub birth: DateTime<Utc>,
-    pub role: Roles,
+    pub role: Vec<Roles>,
     pub active: bool,
     pub log: Log,
 }
