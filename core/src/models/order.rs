@@ -1,4 +1,4 @@
-use super::{Log, PaymentMethod, Product, User};
+use super::{Log, PaymentMethod, PaymentStatus, Product, User};
 use serde::{Deserialize, Serialize};
 use uuid::Uuid;
 
@@ -10,7 +10,8 @@ pub struct Order<'a> {
     pub producuts: Vec<ProductInfo<'a>>,
 
     pub status: OrderStatus,
-    pub payment: PaymentMethod,
+    pub payment_method: PaymentMethod,
+    pub payment_status: PaymentStatus,
     pub total: f64,
     pub nfe: &'a str,
 
@@ -27,11 +28,8 @@ pub struct ProductInfo<'a> {
 
 #[derive(Serialize, Deserialize)]
 pub enum OrderStatus {
-    Pending,
-    Paid,
+    Preparing,
     Sent,
     Delivered,
-    Canceled,
     Reversed,
-    Completed,
 }

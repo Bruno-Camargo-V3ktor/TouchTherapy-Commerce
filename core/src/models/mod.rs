@@ -6,6 +6,7 @@ mod cart;
 mod category;
 mod equipment;
 mod order;
+mod payment;
 mod product;
 mod roles;
 mod service;
@@ -17,6 +18,7 @@ pub use cart::*;
 pub use category::*;
 pub use equipment::*;
 pub use order::*;
+pub use payment::*;
 pub use product::*;
 pub use roles::*;
 pub use service::*;
@@ -27,12 +29,4 @@ pub use user::*;
 pub struct Log {
     pub created_at: DateTime<Utc>,
     pub updated_at: DateTime<Utc>,
-}
-
-#[derive(Serialize, Deserialize)]
-pub enum PaymentMethod {
-    Pix,
-    CreditcCard,
-    DebitCard,
-    Boleto,
 }
