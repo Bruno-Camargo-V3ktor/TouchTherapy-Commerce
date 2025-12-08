@@ -5,12 +5,14 @@ mod appointment;
 mod equipment;
 mod roles;
 mod service;
+mod suppliers;
 mod user;
 
 pub use appointment::*;
 pub use equipment::*;
 pub use roles::*;
 pub use service::*;
+pub use suppliers::*;
 pub use user::*;
 
 #[derive(Serialize, Deserialize)]
