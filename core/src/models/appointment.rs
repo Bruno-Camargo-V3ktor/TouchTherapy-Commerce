@@ -31,5 +31,6 @@ pub enum AppointmentStatus {
     Pending,
     Scheduled,
     Canceled,
+    Completed,
     NoShow,
 }
