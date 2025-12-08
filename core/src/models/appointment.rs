@@ -7,7 +7,6 @@ use uuid::Uuid;
 pub struct Appointment<'a> {
     pub id: Uuid,
 
-    #[serde(borrow)]
     pub client: User<'a>,
     pub professional: User<'a>,
     pub service: Service<'a>,
