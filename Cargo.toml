@@ -1,6 +1,6 @@
 [workspace]
 resolver = '2'
-members = ["adapters", "core", "ports", "server", "web"]
+members = ["adapters", "domain", "ports", "server", "web"]
 
 [workspace.dependencies]
 serde = { version = "1.0", features = ["derive"] }
@@ -10,9 +10,9 @@ tokio = { version = "1.0", features = ["full"] }
 anyhow = "1.0"
 async-trait = "0.1.89"
 
-tt-core = { path = "./core" }
-tt-adapters = { path = "./adapter" }
-tt-ports = { path = "./ports" }
+domain = { path = "./domain" }
+adapters = { path = "./adapter" }
+ports = { path = "./ports" }
 
 [profile]
 

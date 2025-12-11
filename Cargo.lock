@@ -535,15 +535,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "core"
-version = "0.1.0"
-dependencies = [
- "chrono",
- "serde",
- "uuid",
-]
-
-[[package]]
 name = "core-foundation"
 version = "0.9.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1277,6 +1268,15 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn 2.0.111",
+]
+
+[[package]]
+name = "domain"
+version = "0.1.0"
+dependencies = [
+ "chrono",
+ "serde",
+ "uuid",
 ]
 
 [[package]]
@@ -3219,6 +3219,11 @@ checksum = "22686f4785f02a4fcc856d3b3bb19bf6c8160d103f7a99cc258bddd0251dc7f2"
 [[package]]
 name = "ports"
 version = "0.1.0"
+dependencies = [
+ "async-trait",
+ "domain",
+ "uuid",
+]
 
 [[package]]
 name = "potential_utf"
